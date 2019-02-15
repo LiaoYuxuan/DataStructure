@@ -18,6 +18,7 @@ public class BucketSort {
 
     //使用数组链表是为了大小不限
     public static ArrayList<Integer> bucketSort(ArrayList<Integer> arr, int bucketSize) {
+        //可能出现空桶
         if (arr == null || arr.size()<2) {
             return arr;
         }
@@ -38,6 +39,7 @@ public class BucketSort {
         ArrayList<Integer> resultArr = new ArrayList<Integer>();
         //初始化桶
         for (int i = 0; i < bucketCount; i++) {
+            //注意是链表，不是数组
             bucketArr.add(new ArrayList<Integer>());
         }
         //将原来的数据填充到应该填充的位置
