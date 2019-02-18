@@ -28,7 +28,7 @@ public class QuickSort {
         //比基准数大的角标，用于换位置
         int smallindex = start -1;
         for(int i = start; i<= end; i++){
-            //大于则不处理
+            //大于则不处理（使用时修改此处的不等号即可，不用改别的）
             if(arr[i] <= arr[end]){
                 smallindex++;
                 if(i>smallindex){
